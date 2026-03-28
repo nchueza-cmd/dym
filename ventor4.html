@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavora con Noi - D&M Carrozzeria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Simple Navbar -->
+    <nav id="navbar">
+        <a href="ventor.html" class="logo-box">
+            <img src="logooo.png" alt="D&M Logo" class="logo-img"> 
+            <div class="logo-text">D&M<br><span>CARROZZERIA</span></div>
+        </a>
+        
+        <a href="ventor.html" class="btn-primary" style="padding: 0.8rem 1.5rem;">
+            <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1 class="legal-title">Lavora con Noi</h1>
+            <p class="legal-subtitle">Unisciti al Team D&M Carrozzeria</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="legal-container">
+            <div class="jobs-intro">
+                <h2>Entra a Far Parte del Futuro della Carrozzeria</h2>
+                <p>D&M Carrozzeria è un'azienda in continua crescita che unisce tradizione artigiana e innovazione tecnologica. Cerchiamo professionisti appassionati che vogliano crescere con noi in un ambiente dinamico e stimolante.</p>
+            </div>
+
+            <!-- Why Join Us -->
+            <div class="legal-section">
+                <h2>Perché Lavorare con Noi?</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h4>Tecnologia all'Avanguardia</h4>
+                        <p>Lavora con sistemi di verniciatura robotica 4.0 e attrezzature di ultima generazione</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4>Formazione Continua</h4>
+                        <p>Corsi di aggiornamento professionale e certificazioni specialistiche a nostre spese</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4>Crescita Professionale</h4>
+                        <p>Opportunità reali di avanzamento di carriera in un'azienda in espansione</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-euro-sign"></i>
+                        </div>
+                        <h4>Retribuzione Competitiva</h4>
+                        <p>Stipendi in linea con il mercato più premi produzione e bonus annuali</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h4>Team Affiatato</h4>
+                        <p>Ambiente di lavoro collaborativo con colleghi esperti e disponibili</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h4>Benefit Aziendali</h4>
+                        <p>Assicurazione sanitaria integrativa, buoni pasto, convenzioni aziendali</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Positions -->
+            <div class="legal-section">
+                <h2>Posizioni Aperte</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Stiamo cercando talenti per le seguenti posizioni:</p>
+
+                <!-- Job 1 -->
+                <div class="job-posting">
+                    <div class="job-header">
+                        <div>
+                            <h3>Carrozziere Esperto</h3>
+                            <div class="job-meta">
+                                <span class="job-type"><i class="fa-solid fa-briefcase"></i> Tempo Pieno</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Firenzuola (FI)</span>
+                                <span class="job-salary"><i class="fa-solid fa-euro-sign"></i> €1.800 - €2.500/mese</span>
+                            </div>
+                        </div>
+                        <span class="job-badge urgent">URGENTE</span>
+                    </div>
+                    
+                    <div class="job-content">
+                        <h4>Descrizione</h4>
+                        <p>Cerchiamo un carrozziere con esperienza comprovata per riparazioni di carrozzeria, raddrizzatura lamiere e sostituzione componenti danneggiati.</p>
+                        
+                        <h4>Requisiti</h4>
+                        <ul>
+                            <li>Esperienza minima di 3 anni come carrozziere</li>
+                            <li>Conoscenza delle tecniche di raddrizzatura e saldatura</li>
+                            <li>Capacità di leggere schemi tecnici</li>
+                            <li>Patente B</li>
+                            <li>Precisione e attenzione ai dettagli</li>
+                        </ul>
+
+                        <h4>Cosa Offriamo</h4>
+                        <ul>
+                            <li>Contratto a tempo indeterminato</li>
+                            <li>Premi di produzione</li>
+                            <li>Formazione su nuove tecnologie</li>
+                            <li>Buoni pasto</li>
+                        </ul>
+
+                        <button class="apply-btn" onclick="applyJob('Carrozziere Esperto')">
+                            <i class="fa-solid fa-paper-plane"></i> Candidati Ora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-posting">
+                    <div class="job-header">
+                        <div>
+                            <h3>Verniciatore Professionista</h3>
+                            <div class="job-meta">
+                                <span class="job-type"><i class="fa-solid fa-briefcase"></i> Tempo Pieno</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Firenzuola (FI)</span>
+                                <span class="job-salary"><i class="fa-solid fa-euro-sign"></i> €1.700 - €2.300/mese</span>
+                            </div>
+                        </div>
+                        <span class="job-badge">DISPONIBILE</span>
+                    </div>
+                    
+                    <div class="job-content">
+                        <h4>Descrizione</h4>
+                        <p>Cerchiamo un verniciatore qualificato per verniciatura di veicoli con tecnologia robotica e tradizionale. Esperienza con sistemi a spruzzo e cabine di verniciatura.</p>
+                        
+                        <h4>Requisiti</h4>
+                        <ul>
+                            <li>Esperienza minima di 2 anni nella verniciatura auto</li>
+                            <li>Conoscenza delle tecniche di preparazione superfici</li>
+                            <li>Capacità di color matching</li>
+                            <li>Conoscenza sistemi di verniciatura all'acqua</li>
+                            <li>Massima precisione e pulizia</li>
+                        </ul>
+
+                        <h4>Cosa Offriamo</h4>
+                        <ul>
+                            <li>Formazione su sistemi robotizzati</li>
+                            <li>Ambiente di lavoro moderno</li>
+                            <li>Equipaggiamento di protezione di qualità</li>
+                            <li>Orari flessibili</li>
+                        </ul>
+
+                        <button class="apply-btn" onclick="applyJob('Verniciatore Professionista')">
+                            <i class="fa-solid fa-paper-plane"></i> Candidati Ora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-posting">
+                    <div class="job-header">
+                        <div>
+                            <h3>Apprendista Carrozziere</h3>
+                            <div class="job-meta">
+                                <span class="job-type"><i class="fa-solid fa-graduation-cap"></i> Apprendistato</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Firenzuola (FI)</span>
+                                <span class="job-salary"><i class="fa-solid fa-euro-sign"></i> €1.200 - €1.500/mese</span>
+                            </div>
+                        </div>
+                        <span class="job-badge">DISPONIBILE</span>
+                    </div>
+                    
+                    <div class="job-content">
+                        <h4>Descrizione</h4>
+                        <p>Offriamo opportunità di apprendistato per giovani motivati che desiderano intraprendere una carriera nel settore della carrozzeria. Formazione completa a 360°.</p>
+                        
+                        <h4>Requisiti</h4>
+                        <ul>
+                            <li>Età 18-29 anni</li>
+                            <li>Diploma di scuola superiore</li>
+                            <li>Forte motivazione ad apprendere</li>
+                            <li>Predisposizione al lavoro manuale</li>
+                            <li>Patente B</li>
+                        </ul>
+
+                        <h4>Cosa Offriamo</h4>
+                        <ul>
+                            <li>Formazione teorica e pratica</li>
+                            <li>Affiancamento con professionisti esperti</li>
+                            <li>Possibilità di assunzione a tempo indeterminato</li>
+                            <li>Certificazioni riconosciute</li>
+                        </ul>
+
+                        <button class="apply-btn" onclick="applyJob('Apprendista Carrozziere')">
+                            <i class="fa-solid fa-paper-plane"></i> Candidati Ora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="job-posting">
+                    <div class="job-header">
+                        <div>
+                            <h3>Receptionist / Addetto Accettazione</h3>
+                            <div class="job-meta">
+                                <span class="job-type"><i class="fa-solid fa-briefcase"></i> Part-Time / Full-Time</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Firenzuola (FI)</span>
+                                <span class="job-salary"><i class="fa-solid fa-euro-sign"></i> €1.400 - €1.800/mese</span>
+                            </div>
+                        </div>
+                        <span class="job-badge">DISPONIBILE</span>
+                    </div>
+                    
+                    <div class="job-content">
+                        <h4>Descrizione</h4>
+                        <p>Cerchiamo una persona dinamica per gestire l'accoglienza clienti, prenotazioni, preventivi e comunicazione con assicurazioni.</p>
+                        
+                        <h4>Requisiti</h4>
+                        <ul>
+                            <li>Diploma di scuola superiore</li>
+                            <li>Ottima capacità di comunicazione</li>
+                            <li>Conoscenza pacchetto Office</li>
+                            <li>Precisione e organizzazione</li>
+                            <li>Preferibile esperienza nel settore automotive</li>
+                        </ul>
+
+                        <h4>Cosa Offriamo</h4>
+                        <ul>
+                            <li>Ambiente di lavoro professionale</li>
+                            <li>Formazione specifica sul ruolo</li>
+                            <li>Orari flessibili disponibili</li>
+                            <li>Possibilità di crescita</li>
+                        </ul>
+
+                        <button class="apply-btn" onclick="applyJob('Receptionist')">
+                            <i class="fa-solid fa-paper-plane"></i> Candidati Ora
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidature Spontanee -->
+            <div class="legal-section">
+                <h2>Candidatura Spontanea</h2>
+                <p>Non hai trovato una posizione adatta? Inviaci comunque il tuo CV! Conserviamo tutte le candidature e ti contatteremo se si aprirà una posizione in linea con il tuo profilo.</p>
+                
+                <div class="spontaneous-application">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <h3>Invia la Tua Candidatura</h3>
+                    <p>Allega il tuo CV e una lettera di presentazione a:</p>
+                    <a href="mailto:lavoro@dmcarrozzeria.it" class="email-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        lavoro@dmcarrozzeria.it
+                    </a>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="legal-section">
+                <h2>Il Nostro Processo di Selezione</h2>
+                
+                <div class="selection-process">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Candidatura</h4>
+                            <p>Invii il tuo CV tramite il form o via email</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Screening</h4>
+                            <p>Valutiamo il tuo profilo (entro 7 giorni)</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Colloquio</h4>
+                            <p>Intervista conoscitiva con il responsabile</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Prova Pratica</h4>
+                            <p>Test tecnico per valutare le competenze</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+
+                    <div class="process-step highlight">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Offerta</h4>
+                            <p>Proposta di assunzione e firma contratto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="legal-section">
+                <h2>Domande Frequenti</h2>
+                
+                <div class="faq-jobs">
+                    <div class="faq-job-item">
+                        <h4><i class="fa-solid fa-question-circle"></i> Devo avere esperienza nel settore automotive?</h4>
+                        <p>Per posizioni senior (carrozziere, verniciatore) l'esperienza è richiesta. Per apprendistato valutiamo motivazione e predisposizione.</p>
+                    </div>
+
+                    <div class="faq-job-item">
+                        <h4><i class="fa-solid fa-question-circle"></i> Offrite formazione?</h4>
+                        <p>Sì, tutti i nostri dipendenti ricevono formazione continua su nuove tecnologie e tecniche. Per apprendisti, formazione completa inclusa.</p>
+                    </div>
+
+                    <div class="faq-job-item">
+                        <h4><i class="fa-solid fa-question-circle"></i> Quali sono gli orari di lavoro?</h4>
+                        <p>Orario standard: Lun-Ven 8:00-17:00, Sabato 9:00-12:00. Per alcune posizioni sono disponibili orari part-time.</p>
+                    </div>
+
+                    <div class="faq-job-item">
+                        <h4><i class="fa-solid fa-question-circle"></i> C'è possibilità di crescita?</h4>
+                        <p>Assolutamente sì. Siamo un'azienda in crescita e valutiamo sempre prima i candidati interni per nuove posizioni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="legal-section">
+                <h2>Contatti</h2>
+                <p>Per informazioni sulle posizioni aperte:</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>lavoro@dmcarrozzeria.it</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+39 123 456 7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Via del Lavoro, Firenzuola (FI)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-back-button">
+                <a href="ventor.html" class="btn-primary">
+                    <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 40px 5%; text-align: center;">
+        <p>&copy; 2026 D&M Carrozzeria. Tutti i diritti riservati.</p>
+        <div style="margin-top: 20px; display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+            <a href="ventor2.html" style="color: white; text-decoration: none;">Privacy Policy</a>
+            <a href="ventor3.html" style="color: white; text-decoration: none;">Termini di Servizio</a>
+            <a href="ventor4.html" style="color: white; text-decoration: none;">Lavora con Noi</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Función para candidarse
+        function applyJob(position) {
+            const email = 'lavoro@dmcarrozzeria.it';
+            const subject = encodeURIComponent(`Candidatura per: ${position}`);
+            const body = encodeURIComponent(`Gentile Team D&M Carrozzeria,\n\nVorrei candidarmi per la posizione di ${position}.\n\nIn allegato troverete il mio CV.\n\nCordiali saluti`);
+            
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
