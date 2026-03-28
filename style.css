@@ -4639,3 +4639,709 @@ footer {
         font-size: 0.75rem;
     }
 }
+
+
+/* =========================================
+   28. MOBILE PERFORMANCE & LAYOUT FIX
+   Comprehensive overhaul for mobile devices
+   ========================================= */
+
+/* --- PERFORMANCE: Disable heavy effects on mobile --- */
+@media (max-width: 768px) {
+    /* Kill particles on mobile - major lag source */
+    #particles-canvas {
+        display: none !important;
+    }
+
+    /* Disable expensive animations */
+    .tilt-card {
+        transform: none !important;
+    }
+
+    /* Reduce transition complexity */
+    .reveal {
+        transition: opacity 0.3s ease, transform 0.3s ease !important;
+    }
+
+    .scale-in {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Disable float animation on images */
+    .vision-img {
+        animation: none !important;
+    }
+
+    /* Disable glow on car stage */
+    .car-stage {
+        animation: none !important;
+        box-shadow: 0 0 20px rgba(0,128,128,0.2) !important;
+    }
+
+    /* Smooth scrolling GPU hint */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* --- MOBILE LAYOUT OVERHAUL --- */
+@media (max-width: 768px) {
+
+    /* === GLOBAL === */
+    .section {
+        padding: 3rem 5% !important;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .btn-primary {
+        padding: 0.9rem 2rem;
+        font-size: 0.85rem;
+    }
+
+    /* === HERO === */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 5% 60px;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        margin-bottom: 25px;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 7px 14px;
+        margin-bottom: 15px;
+    }
+
+    .hero-trust {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .hero-trust-item {
+        font-size: 0.78rem;
+    }
+
+    .hero-trust-divider {
+        display: none;
+    }
+
+    /* === STATS: 2x2 grid, compact === */
+    .stats-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        padding: 2rem 5% !important;
+        margin-top: -30px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .stat-num {
+        font-size: 2rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.7rem !important;
+        letter-spacing: 1px;
+    }
+
+    /* === EMERGENCY BANNER: compact === */
+    .emergency-banner {
+        margin: 0 3% !important;
+        padding: 1.2rem !important;
+        margin-top: -10px !important;
+        border-radius: 18px !important;
+    }
+
+    .emergency-content {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 12px !important;
+    }
+
+    .emergency-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .emergency-text h3 {
+        font-size: 1rem !important;
+    }
+
+    .emergency-text p {
+        font-size: 0.85rem;
+    }
+
+    .emergency-btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* === SERVICES: compact cards === */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .service-card {
+        padding: 1.5rem !important;
+        border-radius: 20px !important;
+    }
+
+    .service-icon {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .service-card p {
+        font-size: 0.88rem;
+    }
+
+    .service-features {
+        margin-top: 12px !important;
+        padding-top: 12px !important;
+    }
+
+    .service-features span {
+        font-size: 0.72rem;
+        padding: 3px 8px;
+    }
+
+    /* === GALLERY: 2 columns === */
+    .gallery-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .gallery-item {
+        border-radius: 12px !important;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.7rem;
+    }
+
+    .gallery-overlay i {
+        font-size: 1rem;
+    }
+
+    /* === COLOR LAB: compact === */
+    #lab {
+        border-radius: 25px !important;
+        margin: 1rem 3% !important;
+        padding: 2.5rem 4% !important;
+    }
+
+    .car-stage {
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .controls {
+        margin-top: 25px !important;
+        gap: 12px !important;
+    }
+
+    .color-btn {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .selected-color-name {
+        font-size: 1rem !important;
+        letter-spacing: 2px !important;
+        margin-top: 15px !important;
+    }
+
+    .finish-controls {
+        margin-top: 20px !important;
+        gap: 8px !important;
+    }
+
+    .finish-btn {
+        padding: 8px 14px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* === TESTIMONIALS: compact === */
+    .testimonial-content {
+        padding: 1.5rem !important;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem !important;
+    }
+
+    .testimonial-nav {
+        display: none !important;
+    }
+
+    /* === PROCESS TIMELINE: compact === */
+    .timeline-container {
+        gap: 0 !important;
+    }
+
+    .timeline-icon {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1rem !important;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .timeline-content p {
+        font-size: 0.88rem;
+    }
+
+    /* === COMPARISON TABLE: compact === */
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-row {
+        padding: 8px 0 !important;
+    }
+
+    /* === CERTIFICATIONS: 2 columns === */
+    .certifications-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+    }
+
+    .cert-card {
+        padding: 1.2rem 0.8rem !important;
+    }
+
+    .cert-icon {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1rem !important;
+    }
+
+    .cert-card h4 {
+        font-size: 0.85rem !important;
+    }
+
+    .cert-card p {
+        font-size: 0.72rem !important;
+    }
+
+    /* === PARTNERS: compact 2-col === */
+    .partners-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .partner-logo {
+        padding: 15px !important;
+        border-radius: 12px !important;
+    }
+
+    .partner-placeholder {
+        font-size: 0.9rem !important;
+    }
+
+    /* === CASE STUDIES: compact === */
+    .case-study {
+        grid-template-columns: 1fr !important;
+        border-radius: 18px !important;
+    }
+
+    .case-study-image {
+        min-height: 180px !important;
+    }
+
+    .case-study-content {
+        padding: 1.2rem !important;
+    }
+
+    .case-study-content h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .case-meta span {
+        font-size: 0.75rem;
+    }
+
+    .case-study-content p {
+        font-size: 0.85rem;
+    }
+
+    .case-tags {
+        gap: 5px !important;
+    }
+
+    .tag {
+        font-size: 0.7rem !important;
+        padding: 3px 8px !important;
+    }
+
+    /* === BEFORE/AFTER SLIDER: compact === */
+    .slider-wrapper {
+        margin: 0 auto;
+    }
+
+    .img-container {
+        border-radius: 18px !important;
+    }
+
+    .slider-handle-btn {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1rem !important;
+    }
+
+    .slider-label {
+        font-size: 0.6rem !important;
+        padding: 4px 10px !important;
+        top: 10px !important;
+    }
+
+    .slider-label-before {
+        right: 15px !important;
+    }
+
+    .slider-label-after {
+        left: 15px !important;
+    }
+
+    /* === CALCULATOR: compact 2-col === */
+    .calc-container {
+        padding: 1.2rem !important;
+        border-radius: 15px !important;
+    }
+
+    .calc-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .calc-btn {
+        padding: 12px 8px !important;
+        border-radius: 12px !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+    }
+
+    .calc-btn i {
+        font-size: 1.2rem !important;
+    }
+
+    .calc-btn span {
+        font-size: 0.72rem !important;
+    }
+
+    .calc-price {
+        font-size: 2rem !important;
+    }
+
+    /* === MAP SECTION: compact === */
+    .address-card {
+        padding: 1.5rem !important;
+    }
+
+    .map-container {
+        min-height: 250px !important;
+    }
+
+    .contact-info-list {
+        gap: 10px !important;
+    }
+
+    .contact-info-item {
+        font-size: 0.82rem;
+    }
+
+    /* === FAQ: compact === */
+    .faq-container {
+        gap: 8px !important;
+    }
+
+    .faq-question {
+        padding: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .faq-answer {
+        padding: 0 15px !important;
+    }
+
+    .faq-answer p {
+        font-size: 0.88rem;
+    }
+
+    /* === CHI SIAMO: compact === */
+    .about-founders {
+        gap: 25px !important;
+    }
+
+    .about-founders-text h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .about-founders-text p {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .about-badge {
+        font-size: 0.65rem !important;
+        padding: 6px 14px !important;
+    }
+
+    .about-img-main img {
+        height: 220px !important;
+    }
+
+    .about-img-small img {
+        height: 140px !important;
+    }
+
+    .about-img-small-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .about-timeline-section,
+    .about-values,
+    .about-workshop,
+    .about-team {
+        margin-bottom: 3rem !important;
+    }
+
+    .about-section-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .about-timeline {
+        padding-left: 35px !important;
+    }
+
+    .about-timeline-content h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .about-timeline-content p {
+        font-size: 0.88rem !important;
+    }
+
+    .about-timeline-img {
+        height: 140px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Values: 2 columns on mobile */
+    .about-values-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+    }
+
+    .about-value-card {
+        padding: 1.5rem 1rem !important;
+        border-radius: 18px !important;
+    }
+
+    .about-value-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .about-value-card h4 {
+        font-size: 1rem !important;
+    }
+
+    .about-value-card p {
+        font-size: 0.78rem !important;
+    }
+
+    /* Workshop: 2 columns */
+    .about-workshop-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .about-workshop-item img {
+        height: 130px !important;
+    }
+
+    .about-workshop-large {
+        grid-column: 1 / -1;
+    }
+
+    .about-workshop-large img {
+        height: 180px !important;
+    }
+
+    .about-workshop-label {
+        font-size: 0.72rem !important;
+        padding: 25px 10px 8px !important;
+    }
+
+    /* Team: horizontal compact */
+    .about-team-grid,
+    .about-team-grid[style*="repeat(3"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .about-team-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+        padding: 1rem !important;
+        gap: 15px;
+        border-radius: 16px !important;
+    }
+
+    .about-team-photo {
+        width: 65px !important;
+        height: 65px !important;
+        margin: 0 !important;
+        flex-shrink: 0;
+    }
+
+    .about-team-card h4 {
+        font-size: 1rem !important;
+    }
+
+    .about-team-role {
+        font-size: 0.68rem !important;
+    }
+
+    .about-team-card p {
+        font-size: 0.78rem !important;
+        margin: 0 !important;
+    }
+
+    .about-team-card.memorial::before {
+        top: 8px;
+        right: 10px;
+        font-size: 1rem;
+    }
+
+    /* About numbers */
+    .about-numbers {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        padding: 1.5rem !important;
+        border-radius: 18px !important;
+    }
+
+    .about-number {
+        font-size: 1.5rem !important;
+    }
+
+    .about-number-label {
+        font-size: 0.68rem !important;
+    }
+
+    /* Legacy quote */
+    .about-legacy-quote {
+        padding: 1.5rem !important;
+        margin: 2rem auto 2rem !important;
+        border-radius: 18px !important;
+    }
+
+    .about-legacy-quote i {
+        font-size: 1.5rem !important;
+    }
+
+    .about-legacy-quote p {
+        font-size: 1rem !important;
+    }
+
+    /* === FOOTER: compact 2-col === */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 25px !important;
+    }
+
+    .footer-col:first-child {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-col:first-child .footer-social {
+        justify-content: center;
+    }
+
+    .footer-col h4 {
+        font-size: 0.85rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-col a {
+        font-size: 0.82rem !important;
+        padding: 2px 0 !important;
+    }
+
+    .footer-col p {
+        font-size: 0.8rem !important;
+        justify-content: flex-start;
+    }
+
+    .footer-logo {
+        font-size: 1.6rem !important;
+    }
+
+    .footer-logo span {
+        font-size: 0.7rem !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    /* === WHATSAPP + CHATBOT position === */
+    .wa-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chatbot-toggle {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.4rem !important;
+        bottom: 20px !important;
+        left: 20px !important;
+    }
+
+    /* === Before/after section rounded corners === */
+    .section[style*="border-radius: 50px"] {
+        border-radius: 20px !important;
+        margin: 2rem 3% !important;
+        padding: 2.5rem 5% !important;
+    }
+}
