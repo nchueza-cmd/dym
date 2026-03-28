@@ -41,6 +41,10 @@ let countersStarted = false;
 // ==========================================
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
+    const isMobile = window.innerWidth <= 768;
+    const loaderDelay = isMobile ? 600 : 1500;
+    const fadeDelay = isMobile ? 400 : 800;
+    
     setTimeout(() => {
         loader.style.opacity = '0';
         setTimeout(() => {
@@ -48,8 +52,8 @@ window.addEventListener('load', () => {
             // Activar animación inicial del hero
             const heroReveal = document.querySelector('.hero-content .reveal');
             if (heroReveal) heroReveal.classList.add('active');
-        }, 800);
-    }, 1500);
+        }, fadeDelay);
+    }, loaderDelay);
     
     // Iniciar partículas después de que cargue la página
     initParticles();
@@ -84,6 +88,12 @@ window.addEventListener('scroll', () => {
 function initParticles() {
     const canvas = document.getElementById('particles-canvas');
     if (!canvas) return;
+    
+    // Disable particles on mobile for performance
+    if (window.innerWidth <= 768) {
+        canvas.style.display = 'none';
+        return;
+    }
     
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -707,6 +717,9 @@ function toggleMenu() {
 // 14. 3D TILT EFFECTS (Service Cards)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Skip tilt effects on mobile for performance
+    if (window.innerWidth <= 768) return;
+    
     const cards = document.querySelectorAll('.tilt-card');
     
     cards.forEach(card => {
