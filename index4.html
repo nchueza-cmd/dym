@@ -273,9 +273,9 @@
                     <i class="fa-solid fa-envelope-open-text"></i>
                     <h3>Invia la Tua Candidatura</h3>
                     <p>Allega il tuo CV e una lettera di presentazione a:</p>
-                    <a href="mailto:lavoro@dmcarrozzeria.it" class="email-link">
+                    <a href="mailto:info@dmcarrozzeria.it" class="email-link">
                         <i class="fa-solid fa-envelope"></i>
-                        lavoro@dmcarrozzeria.it
+                        info@dmcarrozzeria.it
                     </a>
                 </div>
             </div>
@@ -377,7 +377,7 @@
                 <div class="contact-grid">
                     <div class="contact-item">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>lavoro@dmcarrozzeria.it</span>
+                        <span>info@dmcarrozzeria.it</span>
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-phone"></i>
@@ -408,16 +408,15 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
     <script>
         // Función para candidarse
         function applyJob(position) {
             const email = 'lavoro@dmcarrozzeria.it';
-            const subject = encodeURIComponent(`Candidatura per: ${position}`);
-            const body = encodeURIComponent(`Gentile Team D&M Meccatronica e Carrozzeria,\n\nVorrei candidarmi per la posizione di ${position}.\n\nIn allegato troverete il mio CV.\n\nCordiali saluti`);
-            
+            const subject = encodeURIComponent(`Candidatura per ${position}`);
+            const body = encodeURIComponent(`Buongiorno,\n\nDesidero candidarmi per la posizione di ${position} presso D&M Meccatronica e Carrozzeria. In allegato il mio CV e una lettera di presentazione.\n\nCordiali saluti,\n[Il Tuo Nome]`);
             window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
         }
     </script>
-</body>
-</html>
+
+

@@ -118,37 +118,75 @@
                 </div>
             </div>
 
-            <!-- Mobile Status Badge -->
-            <div class="mobile-status-badge" id="mobile-status-badge">
-                <span class="mobile-status-dot"></span>
-                <span class="mobile-status-text">CHECKING...</span>
-            </div>
+            <!-- Desktop Dropdown Navigation -->
+            <div class="nav-dropdown-group">
+                <!-- Servizi -->
+                <div class="nav-item-dropdown">
+                    <a href="#servizi" class="nav-link" onclick="toggleMenu()">
+                        <i class="fa-solid fa-wrench"></i>
+                        <span>Servizi</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <div class="dropdown-panel">
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-spray-can"></i> Verniciatura 4.0</a>
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-hammer"></i> Levabolli Grandine</a>
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-plug"></i> EV & Microcar</a>
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-car-burst"></i> Raddrizzatura Scocca</a>
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-gem"></i> Car Detailing</a>
+                        <a href="#servizi" onclick="toggleMenu()"><i class="fa-solid fa-layer-group"></i> Wrapping & Pellicole</a>
+                    </div>
+                </div>
 
-            <!-- Navigation Links with Icons -->
-            <a href="#servizi" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-wrench"></i>
-                <span>Servizi</span>
-            </a>
-            <a href="#chi-siamo" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-users"></i>
-                <span>Chi Siamo</span>
-            </a>
-            <a href="#lab" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-palette"></i>
-                <span>Color Lab</span>
-            </a>
-            <a href="#galleria" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-images"></i>
-                <span>Galleria</span>
-            </a>
-            <a href="#prezzi" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-calculator"></i>
-                <span>Listino</span>
-            </a>
-            <a href="#dove-siamo" class="nav-link" onclick="toggleMenu()">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Contatti</span>
-            </a>
+                <!-- Chi Siamo -->
+                <div class="nav-item-dropdown">
+                    <a href="#chi-siamo" class="nav-link" onclick="toggleMenu()">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Chi Siamo</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <div class="dropdown-panel">
+                        <a href="#chi-siamo" onclick="toggleMenu()"><i class="fa-solid fa-book-open"></i> La Nostra Storia</a>
+                        <a href="#chi-siamo" onclick="toggleMenu()"><i class="fa-solid fa-people-group"></i> Il Team</a>
+                        <a href="#certificazioni" onclick="toggleMenu()"><i class="fa-solid fa-award"></i> Certificazioni</a>
+                        <a href="#partners" onclick="toggleMenu()"><i class="fa-solid fa-handshake"></i> Partner</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio -->
+                <div class="nav-item-dropdown">
+                    <a href="#galleria" class="nav-link" onclick="toggleMenu()">
+                        <i class="fa-solid fa-images"></i>
+                        <span>Portfolio</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <div class="dropdown-panel">
+                        <a href="#galleria" onclick="toggleMenu()"><i class="fa-solid fa-camera"></i> Galleria Lavori</a>
+                        <a href="#progetti" onclick="toggleMenu()"><i class="fa-solid fa-star"></i> Progetti Speciali</a>
+                        <a href="#lab" onclick="toggleMenu()"><i class="fa-solid fa-palette"></i> D&M Color Lab</a>
+                    </div>
+                </div>
+
+                <!-- Preventivo -->
+                <div class="nav-item-dropdown">
+                    <a href="#prezzi" class="nav-link" onclick="toggleMenu()">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Preventivo</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <div class="dropdown-panel">
+                        <a href="#prezzi" onclick="toggleMenu()"><i class="fa-solid fa-calculator"></i> Calcola Preventivo</a>
+                        <a href="#confronto" onclick="toggleMenu()"><i class="fa-solid fa-scale-balanced"></i> Perché D&M?</a>
+                        <a href="#processo" onclick="toggleMenu()"><i class="fa-solid fa-list-check"></i> Il Nostro Processo</a>
+                        <a href="#faq" onclick="toggleMenu()"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </div>
+
+                <!-- Contatti (no dropdown) -->
+                <a href="#dove-siamo" class="nav-link nav-link-single" onclick="toggleMenu()">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Contatti</span>
+                </a>
+            </div>
             
             <!-- Mobile Prenota Button -->
             <a href="javascript:void(0)" class="btn-primary mobile-prenota-btn" onclick="toggleModal(); toggleMenu();">
@@ -366,7 +404,7 @@
             </div>
             <div class="about-founders-gallery">
                 <div class="about-img-main">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e0e0e0'/%3E%3Ccircle cx='150' cy='110' r='55' fill='%23999'/%3E%3Cellipse cx='150' cy='290' rx='90' ry='80' fill='%23999'/%3E%3Ctext x='150' y='20' text-anchor='middle' fill='%23888' font-size='20' font-family='serif'>✝</text%3E%3C/svg%3E" alt="Darío Diani al lavoro">
+                    <img src="dario-diani.jpg" alt="Darío Diani al lavoro">
                     <div class="about-img-caption"><i class="fa-solid fa-dove" style="color: var(--accent); margin-right: 5px;"></i> In memoria di Darío Diani — L'iniziatore della tradizione</div>
                 </div>
                 <div class="about-img-small-grid">
@@ -386,7 +424,7 @@
         <div class="about-founders reveal scale-in" style="margin-top: 4rem;">
             <div class="about-founders-gallery" style="order: -1;">
                 <div class="about-img-main">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e8e8e8'/%3E%3Ccircle cx='150' cy='110' r='55' fill='%23bbb'/%3E%3Cellipse cx='150' cy='290' rx='90' ry='80' fill='%23bbb'/%3E%3C/svg%3E" alt="David Diani">
+                    <img src="david-diani.jpg" alt="David Diani">
                     <div class="about-img-caption"><i class="fa-solid fa-wrench" style="color: var(--accent); margin-right: 5px;"></i> David Diani — La nuova generazione</div>
                 </div>
                 <div class="about-img-small-grid">
@@ -405,32 +443,32 @@
                 <h3>La Tradizione Continua</h3>
                 <p>Nato il <strong>9 dicembre 1973</strong>, <strong>David Diani</strong> è cresciuto nell'officina del padre, respirando fin da bambino il profumo della vernice, il suono degli attrezzi e la soddisfazione di vedere un'auto tornare perfetta. Non ci sono stati dubbi su quale strada avrebbe preso nella vita.</p>
                 <p>David ha ereditato la passione di suo padre Darío — che purtroppo non è più con noi — ma l'ha portata ancora più avanti: si è formato nella <strong>meccatronica automotriz</strong>, unendo la maestria meccanica tradizionale con l'elettronica e la diagnostica digitale dei veicoli moderni. Ha studiato, si è certificato e ha acquisito anni di esperienza professionale nel settore.</p>
-                <p>Con una visione chiara — <em>unire la tradizione artigiana del padre con la tecnologia del futuro</em> — David ha coltivato il sogno di aprire un centro d'eccellenza tutto suo, dove carrozzeria classica e meccatronica convivono sotto lo stesso tetto.</p>
+                <p>Con una visione chiara — <em>unire la tradizione artigiana del padre con la tecnologia del futuro</em> — David ha realizzato il sogno di una vita: aprire un centro d'eccellenza tutto suo, dove carrozzeria classica e meccatronica convivono sotto lo stesso tetto. Oggi, con suo figlio <strong>Simone</strong> già pronto a raccogliere il testimone, la tradizione Diani è destinata a durare ancora per generazioni.</p>
             </div>
         </div>
 
-        <!-- D&M: David & Marilú -->
+        <!-- THE FUTURE: Simone Diani -->
         <div class="about-founders reveal scale-in" style="margin-top: 4rem;">
             <div class="about-founders-text">
-                <div class="about-badge" style="background: rgba(255, 191, 0, 0.15); color: #cc9900;"><i class="fa-solid fa-heart" style="margin-right: 5px;"></i> D&M · DAVID & MARILÚ</div>
-                <h3>Un Sogno in Due: Nasce D&M</h3>
-                <p>Dietro ogni grande impresa c'è qualcuno che crede in te ancora prima che tu creda in te stesso. Per David, quella persona è <strong>Esmerita Marilú Hueza Cruz</strong> — sua moglie, la sua motivazione e co-fondatrice di D&M.</p>
-                <p>Marilú non è solo un supporto morale: è stata lei a spingere David a trasformare il suo sogno in realtà. Con la sua energia, determinazione e visione imprenditoriale, ha convinto David che era arrivato il momento di fare il grande passo e aprire il loro <strong>centro di meccatronica e carrozzeria</strong>.</p>
-                <p>Il nome <strong>"D&M"</strong> non è un caso: è l'unione delle iniziali di <strong>David</strong> e <strong>Marilú</strong> — un simbolo del loro percorso insieme, nella vita e nel lavoro. Dall'insegnamento di Darío, che oggi ci guarda dall'alto, attraverso le mani esperte di David, fino alla visione condivisa con Marilú: D&M Meccatronica e Carrozzeria è il frutto di <strong>tre generazioni di amore per le automobili</strong>.</p>
+                <div class="about-badge" style="background: rgba(255, 191, 0, 0.15); color: #cc9900;"><i class="fa-solid fa-seedling" style="margin-right: 5px;"></i> TERZA GENERAZIONE · IL FUTURO</div>
+                <h3>Simone Diani: Il Futuro è in Buone Mani</h3>
+                <p>La storia della famiglia Diani non si ferma a David. Con <strong>Simone Diani</strong>, figlio di David, la fiamma accesa dal nonno Darío nel 1950 si prepara a brillare ancora più forte nella prossima generazione.</p>
+                <p>Cresciuto tra officine e motori — proprio come suo padre prima di lui — Simone rappresenta il ponte naturale tra la <strong>tradizione artigiana</strong> della famiglia e le <strong>nuove frontiere</strong> dell'automotive: veicoli elettrici, diagnostica avanzata e tecnologie digitali che stanno trasformando il settore.</p>
+                <p>Con Simone, D&M Meccatronica e Carrozzeria guarda al futuro con la certezza che i valori di precisione, dedizione e passione tramandati da Darío a David continueranno a vivere per molti anni ancora. <strong>Tre generazioni, un'unica missione: l'eccellenza automobilistica.</strong></p>
             </div>
             <div class="about-founders-gallery">
                 <div class="about-img-main">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e8e8e8'/%3E%3Ccircle cx='150' cy='110' r='55' fill='%23bbb'/%3E%3Cellipse cx='150' cy='290' rx='90' ry='80' fill='%23bbb'/%3E%3C/svg%3E" alt="David e Marilú">
-                    <div class="about-img-caption"><i class="fa-solid fa-heart" style="color: #ff4444; margin-right: 5px;"></i> David & Marilú — Fondatori di D&M</div>
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=600" alt="Il futuro di D&M">
+                    <div class="about-img-caption"><i class="fa-solid fa-seedling" style="color: var(--accent); margin-right: 5px;"></i> Simone Diani — La terza generazione</div>
                 </div>
                 <div class="about-img-small-grid">
                     <div class="about-img-small">
                         <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=400" alt="Il nuovo centro">
-                        <span>Il nuovo centro D&M</span>
+                        <span>Il centro D&M oggi</span>
                     </div>
                     <div class="about-img-small">
-                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400" alt="Eccellenza">
-                        <span>Eccellenza quotidiana</span>
+                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=400" alt="Tecnologia futura">
+                        <span>Il futuro dell'automotive</span>
                     </div>
                 </div>
             </div>
@@ -476,27 +514,27 @@
                 </div>
 
                 <div class="about-timeline-item">
-                    <div class="about-timeline-year">L'Incontro</div>
+                    <div class="about-timeline-year">Il Grande Passo</div>
                     <div class="about-timeline-content">
-                        <h4>David & Marilú</h4>
-                        <p>David incontra Esmerita Marilú Hueza Cruz. Insieme condividono valori, sogni e ambizioni. Marilú diventa la forza motrice che ispira David a pensare in grande e a credere nel proprio progetto imprenditoriale.</p>
+                        <h4>Nasce D&M Meccatronica e Carrozzeria</h4>
+                        <p>Forte dell'insegnamento ereditato da suo padre Darío e di anni di esperienza professionale, David Diani realizza il sogno di una vita: apre il proprio centro di meccatronica e carrozzeria. Un luogo dove la tradizione artigiana della famiglia Diani si fonde con la tecnologia del futuro. Il sogno di Darío, finalmente realizzato.</p>
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=500" alt="Apertura D&M" class="about-timeline-img">
                     </div>
                 </div>
 
                 <div class="about-timeline-item">
-                    <div class="about-timeline-year">Il Grande Passo</div>
+                    <div class="about-timeline-year">La Nuova Generazione</div>
                     <div class="about-timeline-content">
-                        <h4>Nasce D&M Meccatronica e Carrozzeria</h4>
-                        <p>Grazie alla motivazione di Marilú e all'insegnamento ereditato da Darío, David e Marilú aprono insieme D&M — un centro all'avanguardia dove la tradizione artigiana della famiglia Diani si fonde con la tecnologia meccatronica del futuro. Il sogno di Darío, finalmente realizzato.</p>
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=500" alt="Apertura D&M" class="about-timeline-img">
+                        <h4>Simone Diani — Il Futuro</h4>
+                        <p>Simone Diani, figlio di David, cresce seguendo le orme del padre e del nonno Darío. Con lui la passione familiare per l'automotive si prepara a entrare nella terza generazione, portando con sé nuove competenze e una visione proiettata verso il futuro del settore.</p>
                     </div>
                 </div>
 
                 <div class="about-timeline-item">
                     <div class="about-timeline-year">Oggi</div>
                     <div class="about-timeline-content">
-                        <h4>Il Futuro è Qui</h4>
-                        <p>D&M Meccatronica e Carrozzeria è oggi un centro d'eccellenza con verniciatura robotica 4.0, diagnostica meccatronica avanzata, certificazioni per veicoli elettrici e un team dedicato. La visione di tre generazioni diventa realtà ogni giorno.</p>
+                        <h4>Tre Generazioni, Un'Unica Missione</h4>
+                        <p>D&M Meccatronica e Carrozzeria è oggi un centro d'eccellenza con verniciatura robotica 4.0, diagnostica meccatronica avanzata e certificazioni per veicoli elettrici. Con Simone pronto a raccogliere il testimone, la visione di tre generazioni Diani continua a crescere ogni giorno.</p>
                         <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=500" alt="D&M oggi" class="about-timeline-img">
                     </div>
                 </div>
@@ -567,13 +605,13 @@
 
         <!-- Team Section -->
         <div class="about-team reveal scale-in">
-            <h3 class="about-section-title"><i class="fa-solid fa-people-group"></i> I Fondatori</h3>
-            <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">Da Darío, che ci guarda dall'alto, a David e Marilú: il cuore di D&M.</p>
+            <h3 class="about-section-title"><i class="fa-solid fa-people-group"></i> La Famiglia Diani</h3>
+            <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">Da Darío, che ci guarda dall'alto, a David e Simone: tre generazioni, un'unica passione.</p>
             
             <div class="about-team-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto;">
                 <div class="about-team-card memorial">
                     <div class="about-team-photo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e0e0e0'/%3E%3Ccircle cx='150' cy='110' r='55' fill='%23999'/%3E%3Cellipse cx='150' cy='290' rx='90' ry='80' fill='%23999'/%3E%3Ctext x='150' y='20' text-anchor='middle' fill='%23888' font-size='20' font-family='serif'>✝</text%3E%3C/svg%3E" alt="Darío Diani">
+                        <img src="dario-diani.jpg" alt="Darío Diani">
                     </div>
                     <h4>Darío Diani ✝</h4>
                     <span class="about-team-role">In Memoria · Maestro Meccanico</span>
@@ -582,7 +620,7 @@
 
                 <div class="about-team-card">
                     <div class="about-team-photo" style="border-color: var(--accent);">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e8e8e8'/%3E%3Ccircle cx='150' cy='110' r='55' fill='%23bbb'/%3E%3Cellipse cx='150' cy='290' rx='90' ry='80' fill='%23bbb'/%3E%3C/svg%3E" alt="David Diani">
+                        <img src="david-diani.jpg" alt="David Diani">
                     </div>
                     <h4>David Diani</h4>
                     <span class="about-team-role">Fondatore · Meccatronica & Carrozzeria</span>
@@ -590,12 +628,12 @@
                 </div>
 
                 <div class="about-team-card">
-                    <div class="about-team-photo" style="border-color: #ff6b81;">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f0e6ef'/%3E%3Ccircle cx='150' cy='105' r='52' fill='%23cba8c8'/%3E%3Cellipse cx='150' cy='285' rx='85' ry='78' fill='%23cba8c8'/%3E%3Cpath d='M100 80 Q90 50 110 35 Q150 10 190 35 Q210 50 200 80' fill='%23cba8c8'/%3E%3C/svg%3E" alt="Esmerita Marilú Hueza Cruz">
+                    <div class="about-team-photo" style="border-color: #43e97b;">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%"><rect width="300" height="300" fill="#e8f5e9"/><circle cx="150" cy="110" r="55" fill="#81c784"/><ellipse cx="150" cy="290" rx="90" ry="80" fill="#81c784"/></svg>
                     </div>
-                    <h4>Esmerita Marilú H.C.</h4>
-                    <span class="about-team-role">Co-Fondatrice · Direzione & Gestione</span>
-                    <p>L'anima imprenditoriale di D&M. La sua visione e motivazione hanno trasformato un sogno in un centro d'eccellenza.</p>
+                    <h4>Simone Diani</h4>
+                    <span class="about-team-role">Terza Generazione · Il Futuro di D&M</span>
+                    <p>Figlio di David, nipote di Darío. Cresciuto tra officine e motori, porterà la tradizione Diani nel futuro dell'automotive.</p>
                 </div>
             </div>
         </div>
@@ -604,7 +642,7 @@
         <div class="about-legacy-quote reveal scale-in" style="text-align: center; margin: 4rem auto 3rem; max-width: 800px; padding: 3rem; background: linear-gradient(135deg, rgba(0,128,128,0.05), rgba(255,191,0,0.05)); border-radius: 30px; border: 1px solid rgba(0,128,128,0.1);">
             <i class="fa-solid fa-quote-left" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; display: block;"></i>
             <p style="font-size: 1.3rem; color: var(--dark); font-weight: 600; line-height: 1.7; font-style: italic; margin-bottom: 15px;">
-                "Mio padre nel 1950, a soli 14 anni, iniziò a smontare motori con le mani e il cuore. Anche se oggi non è più con noi, il suo insegnamento vive in ogni auto che ripariamo. Marilú mi ha dato la forza di trasformare quel ricordo in un sogno reale. D&M è dedicata a lui."
+                "Mio padre nel 1950, a soli 14 anni, iniziò a smontare motori con le mani e il cuore. Anche se oggi non è più con noi, il suo insegnamento vive in ogni auto che ripariamo. Sapere che Simone continuerà questa tradizione è il regalo più grande. D&M è dedicata a mio padre."
             </p>
             <span style="color: var(--primary); font-weight: 700; font-size: 1rem;">— David Diani, Fondatore</span>
         </div>
@@ -1441,14 +1479,10 @@
     <!-- ============================================
          WHATSAPP FLOATING BUTTON
          ============================================ -->
-    <a href="https://wa.me/391234567890" class="wa-float" target="_blank" title="Chatta con noi">
+    <a href="https://wa.me/391234567890" class="wa-float" target="_blank" title="Contattaci su WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- ============================================
-         SCRIPTS
-         ============================================ -->
     <script src="script.js"></script>
-
 </body>
 </html>

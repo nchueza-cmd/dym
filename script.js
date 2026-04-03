@@ -709,8 +709,37 @@ function toggleMenu() {
     const navMenu = document.getElementById('navMenu');
     if (navMenu) {
         navMenu.classList.toggle('active');
+        // Close all open dropdowns when closing menu
+        if (!navMenu.classList.contains('active')) {
+            document.querySelectorAll('.nav-item-dropdown.open').forEach(d => d.classList.remove('open'));
+        }
     }
 }
+
+// Mobile dropdown accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = () => window.innerWidth <= 768;
+    
+    document.querySelectorAll('.nav-item-dropdown > .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (!isMobile()) return; // Let desktop hover work normally
+            
+            const parent = this.closest('.nav-item-dropdown');
+            const isOpen = parent.classList.contains('open');
+            
+            // Close all others
+            document.querySelectorAll('.nav-item-dropdown.open').forEach(d => {
+                if (d !== parent) d.classList.remove('open');
+            });
+            
+            if (!isOpen) {
+                e.preventDefault(); // Prevent navigation, open dropdown first
+                parent.classList.add('open');
+            }
+            // If already open, let the link navigate normally
+        });
+    });
+});
 
 
 // ==========================================
