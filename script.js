@@ -37,26 +37,19 @@ let countersStarted = false;
 
 
 // ==========================================
-// 2. LOADER & PROGRESS BAR
+// 2. INIT & PROGRESS BAR
 // ==========================================
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    const isMobile = window.innerWidth <= 768;
-    const loaderDelay = isMobile ? 600 : 1500;
-    const fadeDelay = isMobile ? 400 : 800;
+document.addEventListener('DOMContentLoaded', function() {
+    // Show hero immediately
+    var heroReveal = document.querySelector('.hero-content .reveal');
+    if (heroReveal) heroReveal.classList.add('active');
     
-    setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => {
-            loader.style.display = 'none';
-            // Activar animación inicial del hero
-            const heroReveal = document.querySelector('.hero-content .reveal');
-            if (heroReveal) heroReveal.classList.add('active');
-        }, fadeDelay);
-    }, loaderDelay);
-    
-    // Iniciar partículas después de que cargue la página
-    initParticles();
+    try { initParticles(); } catch(e) {}
+});
+
+window.addEventListener('load', function() {
+    var heroReveal = document.querySelector('.hero-content .reveal');
+    if (heroReveal) heroReveal.classList.add('active');
 });
 
 // Scroll Progress Bar
@@ -720,23 +713,38 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     const isMobile = () => window.innerWidth <= 768;
     
+    // Main category links - open/close accordion on mobile
     document.querySelectorAll('.nav-item-dropdown > .nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
-            if (!isMobile()) return; // Let desktop hover work normally
+            if (!isMobile()) return; // Desktop uses hover
             
             const parent = this.closest('.nav-item-dropdown');
             const isOpen = parent.classList.contains('open');
             
-            // Close all others
+            // Close all other dropdowns
             document.querySelectorAll('.nav-item-dropdown.open').forEach(d => {
                 if (d !== parent) d.classList.remove('open');
             });
             
             if (!isOpen) {
-                e.preventDefault(); // Prevent navigation, open dropdown first
+                // First tap: open dropdown, don't navigate
+                e.preventDefault();
                 parent.classList.add('open');
+            } else {
+                // Second tap: close dropdown, navigate, close menu
+                parent.classList.remove('open');
+                toggleMenu();
             }
-            // If already open, let the link navigate normally
+        });
+    });
+    
+    // Sub-item links inside dropdown panels - navigate and close menu
+    document.querySelectorAll('.dropdown-panel a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (!isMobile()) return;
+            // Close all dropdowns and menu
+            document.querySelectorAll('.nav-item-dropdown.open').forEach(d => d.classList.remove('open'));
+            toggleMenu();
         });
     });
 });

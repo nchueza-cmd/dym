@@ -355,11 +355,6 @@ nav.scrolled {
     opacity: 0.35;
 }
 
-.nav-item-dropdown:hover .nav-arrow {
-    transform: rotate(180deg);
-    opacity: 0.8;
-}
-
 /* Dropdown Panel (Desktop) */
 .dropdown-panel {
     position: absolute;
@@ -377,10 +372,18 @@ nav.scrolled {
     z-index: 2000;
 }
 
-.nav-item-dropdown:hover .dropdown-panel {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+/* Desktop only: hover to open dropdown (not on touch devices) */
+@media (hover: hover) {
+    .nav-item-dropdown:hover .dropdown-panel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+    
+    .nav-item-dropdown:hover .nav-arrow {
+        transform: rotate(180deg);
+        opacity: 0.8;
+    }
 }
 
 .dropdown-panel a {
@@ -2371,18 +2374,22 @@ footer {
 
     /* Mobile dropdown panel - accordion style */
     .dropdown-panel {
-        position: static;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        min-width: auto;
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 10px 5px 10px;
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        min-width: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 10px 0 10px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+    }
+
+    .nav-item-dropdown:hover .dropdown-panel {
+        max-height: 0;
     }
 
     .nav-item-dropdown.open .dropdown-panel {
@@ -5435,46 +5442,52 @@ footer {
         padding: 25px 10px 8px !important;
     }
 
-    /* Team: horizontal compact */
+    /* Team: vertical clean cards */
     .about-team-grid,
     .about-team-grid[style*="repeat(3"] {
         grid-template-columns: 1fr !important;
-        gap: 12px !important;
+        gap: 15px !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
     }
 
     .about-team-card {
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: column !important;
         align-items: center !important;
-        text-align: left !important;
-        padding: 1rem !important;
-        gap: 15px;
-        border-radius: 16px !important;
+        text-align: center !important;
+        padding: 1.5rem 1.2rem !important;
+        gap: 8px;
+        border-radius: 20px !important;
     }
 
     .about-team-photo {
-        width: 65px !important;
-        height: 65px !important;
-        margin: 0 !important;
+        width: 85px !important;
+        height: 85px !important;
+        margin: 0 auto 5px !important;
         flex-shrink: 0;
     }
 
     .about-team-card h4 {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 2px !important;
     }
 
     .about-team-role {
-        font-size: 0.68rem !important;
+        font-size: 0.72rem !important;
+        margin-bottom: 5px !important;
     }
 
     .about-team-card p {
-        font-size: 0.78rem !important;
+        font-size: 0.85rem !important;
         margin: 0 !important;
+        line-height: 1.5 !important;
+        color: #666;
     }
 
     .about-team-card.memorial::before {
-        top: 8px;
-        right: 10px;
+        top: 10px;
+        right: 12px;
         font-size: 1rem;
     }
 
